@@ -1,0 +1,17 @@
+######### Browser details - chrome,FF,IE##########
+
+browser=chrome
+
+######### URL,User name and Password #########
+
+url=https://saas.test.auckland.ac.nz/perfectshop
+username=kbas663
+password=Kbas663_01
+
+########## item details ########
+
+itemname=pen
+numberofitems=50
+	
+
+

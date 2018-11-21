@@ -1,0 +1,30 @@
+package com.qa.purchaseorder.testcase;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.testng.annotations.Test;
+
+import com.qa.purchaseorder.utilities.GoogleSheetAPI;
+
+
+
+public class EQuotePOTest {
+
+	
+	@Test
+	public void test() throws IOException {
+	
+	GoogleSheetAPI sheetAPI = new GoogleSheetAPI();
+	List<List<Object>> values = sheetAPI.getSpreadSheetRecords("1G28znwoeitcaN-tRssl5aMULunCWyid6T3TmrRIlGW0", "Sheet1!A1:C");
+	
+	
+	for(int i=0;i<=values.size();i++) {
+		
+		
+		
+	}
+	
+	
+	}
+}

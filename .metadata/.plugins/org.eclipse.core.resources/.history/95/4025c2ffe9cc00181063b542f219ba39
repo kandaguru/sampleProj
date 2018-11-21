@@ -1,0 +1,8 @@
+######URL - Purchase Order#######
+
+standardPOurl=https://www.forms.test.auckland.ac.nz/en/staff/financial-services/standard-purchase-order-request.html
+EquotePOurl=https://www.forms.test.auckland.ac.nz/en/staff/financial-services/e-quote-purchase-order-request.html
+UrgentPOurl=https://www.forms.test.auckland.ac.nz/en/staff/financial-services/urgent-purchase-order-request.html
+
+
+

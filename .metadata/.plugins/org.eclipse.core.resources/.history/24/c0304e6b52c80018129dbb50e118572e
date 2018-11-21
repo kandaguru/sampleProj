@@ -1,0 +1,18 @@
+package com.uoa.minc.page;
+
+import java.io.IOException;
+
+import com.uoa.qa.minc.base.TestBase;
+
+public class CurrentOrder extends TestBase {
+
+	public CurrentOrder() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+	
+
+}

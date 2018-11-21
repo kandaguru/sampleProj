@@ -1,0 +1,22 @@
+package com.qa.purchaseorder.testcase;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.util.List;
+
+import org.testng.annotations.Test;
+
+
+
+
+
+public class EQuotePOTest {
+
+	
+	@Test
+	public void setUp() throws IOException, GeneralSecurityException {
+	
+	
+	}
+	
+}

@@ -1,0 +1,100 @@
+package ExcelTestPackage;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
+
+public class TestDataDrivenNew {
+	
+	@Test
+	public void tableTestnew() throws IOException
+	{
+		
+		
+		
+		ArrayList<String> a= new ArrayList();
+		
+		
+		
+FileInputStream fis= new FileInputStream("C:\\Users\\kbas663\\Desktop\\Test Stratergy\\DemoData.xlsx");
+		
+		XSSFWorkbook wb= new XSSFWorkbook(fis);
+		
+		
+	int numberOfSheets=	wb.getNumberOfSheets();
+	int col=0;
+	
+	
+	for(int shno=0;shno<numberOfSheets;shno++) {
+		
+		
+		if(wb.getSheetName(shno).equalsIgnoreCase("DataSheet 2")) {
+			
+			
+			XSSFSheet sheet=wb.getSheetAt(shno);
+			
+			System.out.println();
+			//System.out.println(sheet.getFirstRowNum());
+			//System.out.println(sheet.getLastRowNum());
+					
+	
+			int rowCount=sheet.getLastRowNum()-sheet.getFirstRowNum();		
+			
+			for(int i=0;i<rowCount;i++)
+			{
+				Row row = sheet.getRow(i+1);
+				
+				
+				
+				
+				
+				for (int j=0;j<row.getLastCellNum();j++) {
+					
+					
+						a.add(row.getCell(j));
+						System.out.println(a);	
+					
+					
+					}
+					
+					
+					
+				}
+				
+				
+				
+				
+			}
+		
+		
+	
+		
+		
+			
+		
+		
+		
+		
+		
+		
+		}
+		
+		
+		
+		
+	}
+		
+		
+		
+		
+
+	
+	}
+

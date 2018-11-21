@@ -1,0 +1,35 @@
+package com.qa.purchaseorder.testcase;
+
+import java.io.IOException;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.qa.purchaseorder.base.POTestBase;
+import com.qa.purchaseorder.page.HomePage;
+import com.qa.purchaseorder.page.LoginPage;
+
+public class PuchaseOrderTest extends POTestBase {
+
+	LoginPage loginPage = new LoginPage();
+	HomePage homePage;
+
+	public PuchaseOrderTest() throws IOException {
+		super();
+	}
+
+	@BeforeTest
+	public void setUp() throws IOException {
+		
+		intialize();
+		homePage = loginPage.login();
+
+	}
+
+	@Test
+	public void doit() {
+
+		System.out.println("done");
+	}
+
+}

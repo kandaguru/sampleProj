@@ -1,0 +1,85 @@
+package com.uoa.qa.winc.utilities;
+
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import com.uoa.qa.winc.base.TestBase;
+
+public class TestUtil extends TestBase {
+
+	public static String parentWindow,childWindow;
+	
+	
+	public TestUtil() throws IOException {
+		super();
+	}
+
+	public static long PAGE_LOAD_TIMEOUT = 20;
+	public static long IMPLICIT_WAIT_TIMEOUT = 20;
+
+	public static int giveFrameCount(By byloc) {
+
+		List<WebElement> frames = driver.findElements(By.tagName("frame"));
+
+		int a = frames.size();
+
+		System.out.println("size:" + a);
+
+		int frameNum = -1;
+
+		for (int i = 0; i < a; i++) {
+
+			driver.switchTo().frame(i);
+
+			List<WebElement> txt = driver.findElements(byloc);
+
+			System.out.println("txt" + txt.size());
+
+			if (txt.size() > 0) {
+
+				frameNum = i;
+				System.out.println(frameNum);
+				break;
+			}
+
+			driver.switchTo().defaultContent();
+
+		}
+
+		return frameNum;
+
+	}
+
+	public static void switchToChildWindow() {
+
+		Set<String> windowHandles = driver.getWindowHandles();
+		Iterator<String> it = windowHandles.iterator();
+
+		 parentWindow = it.next();
+		 childWindow = it.next();
+
+		driver.switchTo().window(childWindow);
+		System.out.println("Current window title:" + driver.getTitle());
+		
+	}
+		
+
+	public static void switchToParentWindow() {
+		
+		
+		Set<String> windowHandles = driver.getWindowHandles();
+		Iterator<String> it = windowHandles.iterator();
+
+		driver.switchTo().window(it.next());
+
+		System.out.println(driver.getTitle());
+	}
+	
+	
+	
+}

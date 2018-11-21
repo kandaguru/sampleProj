@@ -1,0 +1,45 @@
+package com.uoa.minc.page;
+
+import java.io.IOException;
+
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.uoa.qa.minc.base.TestBase;
+
+public class LoginPage extends TestBase {
+
+	public LoginPage() throws IOException {
+		super();
+		PageFactory.initElements(driver, this);
+
+	}
+
+	@FindBy(id = "username")
+	static WebElement userName;
+
+	@FindBy(id = "password")
+	static WebElement password;
+
+	
+	@FindBy(id = "_eventId_proceed")
+	static WebElement signIn;
+
+
+	public static void login() {
+
+		userName.clear();
+		userName.sendKeys(prop.getProperty("username"));
+
+		password.clear();
+		password.sendKeys(prop.getProperty("password"));
+		
+		signIn.click();
+		return 
+		
+	}
+
+}

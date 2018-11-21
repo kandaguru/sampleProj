@@ -1,0 +1,29 @@
+package com.uoa.minc.page;
+
+import java.io.IOException;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.uoa.qa.minc.base.TestBase;
+
+public class LoginPage extends TestBase {
+	
+	public LoginPage() throws IOException {
+		super();
+		PageFactory.initElements(driver, this);
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	public static void login() {
+		
+		
+		
+	}
+
+}

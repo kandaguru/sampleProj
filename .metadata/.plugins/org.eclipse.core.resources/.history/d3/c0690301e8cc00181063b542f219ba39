@@ -1,0 +1,11 @@
+package com.qa.purchaseorder.utilities;
+
+import com.qa.purchaseorder.base.POTestBase;
+
+public class POTestUtil extends POTestBase {
+	
+	public static long PAGE_LOAD_TIMEOUT = 20;
+	public static long IMPLICIT_WAIT_TIMEOUT = 20;
+
+
+}

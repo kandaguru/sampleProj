@@ -1,0 +1,7 @@
+package com.uoa.minc.page;
+
+public class HomePage {
+	
+	@findBy(linkText="Winc (formerly Staples)")
+	WebElement wincLink;
+}

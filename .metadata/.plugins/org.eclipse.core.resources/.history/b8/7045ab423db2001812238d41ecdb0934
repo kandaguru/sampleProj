@@ -1,0 +1,24 @@
+package ExcelTestPackage;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class TestDataDrivenNew {
+	
+	@Test
+	public void tableTestnew()
+	{
+		
+		
+FileInputStream fis= new FileInputStream("C:\\Users\\kbas663\\Desktop\\Test Stratergy\\DemoData.xlsx");
+		
+		XSSFWorkbook wb= new XSSFWorkbook(fis);
+		
+		
+		
+		
+		
+	}
+
+}

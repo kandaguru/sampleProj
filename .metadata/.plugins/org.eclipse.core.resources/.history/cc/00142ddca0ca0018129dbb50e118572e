@@ -1,0 +1,17 @@
+######### Browser details - chrome,FF,IE##########
+
+browser=chrome
+
+######### URL,User name and Password #########
+
+url=https://saas.test.auckland.ac.nz/perfectshop
+username=kbas663
+password=Kbas663_01
+
+########## item details ########
+########## append '.0' at the end of numberofitmes ,eg : 23.0
+itemname=pen
+numberofitems=26         
+
+
+

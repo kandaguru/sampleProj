@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;PurchaseOrderProject/src/main/java/com.qa.purchaseorder.drivers&apos;&#x0D;&#x0A;- Original project: &apos;WincProject&apos;&#x0D;&#x0A;- Destination element: &apos;PurchaseOrderProject/src/main/java/com.qa.purchaseorder.drivers&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     chromedriver.exe&#x0D;&#x0A;     geckodriver.exe" description="Copy files" destination="=PurchaseOrderProject/src\/main\/java&lt;com.qa.purchaseorder.drivers" element1="src/main/java/com/uoa/qa/winc/resources/chromedriver.exe" element2="src/main/java/com/uoa/qa/winc/resources/geckodriver.exe" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1539650378074" units="0" version="1.0"/>
+</session>

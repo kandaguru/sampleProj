@@ -1,0 +1,36 @@
+######### Browser details - chrome,FF,IE##########
+##chrome is preferred
+
+browser=chrome
+
+######### URL,User name and Password #########
+
+url=https://saas.test.auckland.ac.nz/perfectshop
+username=kbas663
+password=Kbas663_01
+
+########## item details ########
+########## append '.0' at the end of number of items ,eg : 23.0 ####
+
+########## Maximum Combination allowed : 5 ########
+
+itemname1=ruler
+numberofitems1=1.0
+
+itemname2=
+numberofitems2=
+
+itemname3=
+numberofitems3=
+
+#itemname4=
+#numberofitems4=
+
+#itemname5=
+#numberofitems6=
+
+
+######### email ########
+
+email=k.baskaran@auckland.ac.nz
+

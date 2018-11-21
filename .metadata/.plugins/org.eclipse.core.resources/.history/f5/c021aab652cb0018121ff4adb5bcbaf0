@@ -1,0 +1,117 @@
+package com.uoa.qa.minc.base;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.events.WebDriverEventListener;
+
+import com.freecrm.qa.utilities.WebEventListener;
+import com.uoa.qa.minc.utilities.TestUtil;
+
+
+
+
+
+public class TestBase {
+	
+	public static WebDriver driver=null;
+	public static Properties prop;
+	public static EventFiringWebDriver e_driver;
+	public static WebDriverEventListener e_listener;
+	
+public TestBase() throws IOException {
+		
+		String path=System.getProperty("user.dir"); 
+		FileInputStream fis= new FileInputStream(path+"\\src\\main\\java\\com\\uoa\\qa\\minc\\properties\\data.properties");
+		prop=new Properties();
+		prop.load(fis);
+		
+	}
+	
+	
+	public static void intialize() throws IOException {
+		
+		//String browser=prop.getProperty("browser");
+		
+		if(driver==null) {
+			
+			
+				
+				if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
+
+					//System.setProperty("webdriver.chrome.driver",
+							//"C:\\Users\\kbas663\\Downloads\\eclips_selenium\\driver\\chromedriver.exe");
+					
+							String path=System.getProperty("user.dir"); 
+							
+							System.setProperty("webdriver.chrome.driver",
+									path+"\\src\\main\\java\\com\\uoa\\qa\\minc\\resources\\chromedriver.exe");
+							
+					driver = new ChromeDriver();
+					
+
+				}
+
+				else if (prop.getProperty("browser").equalsIgnoreCase("FF")) {
+
+					//System.setProperty("webdriver.gecko.driver",
+							//"C:\\Users\\kbas663\\Downloads\\eclips_selenium\\driver\\driver\\geckodriver.exe");
+					
+					String path=System.getProperty("user.dir"); 
+					
+					System.setProperty("webdriver.gecko.driver",
+							path+"\\src\\main\\java\\com\\uoa\\qa\\minc\\resources\\geckodriver.exe");
+					
+					driver = new FirefoxDriver();
+
+				}
+				
+				else if (prop.getProperty("browser").equalsIgnoreCase("IE")){
+					
+					
+					System.setProperty("webdriver.ie.driver",
+							"C:\\Users\\kbas663\\Downloads\\eclips_selenium\\driver\\IEDriverServer.exe");
+					
+					InternetExplorerOptions ieOptions = new InternetExplorerOptions();
+					ieOptions.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+					
+					driver = new InternetExplorerDriver(ieOptions);
+					
+				}
+				
+			}
+			
+		
+		e_driver= new EventFiringWebDriver(driver);
+		e_listener= new WebDriverEventListener();
+		e_driver.register(e_listener);
+		
+		driver=e_driver;
+	
+	driver.manage().window().maximize();
+	driver.manage().deleteAllCookies();
+	driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+	
+	driver.get(prop.getProperty("url"));
+	
+	
+	
+	
+	
+	}
+		
+		
+	
+
+}

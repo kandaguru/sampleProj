@@ -1,0 +1,33 @@
+package com.uoa.qa.winc.page;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.uoa.qa.winc.base.TestBase;
+
+public class ReturnToCartPage extends TestBase {
+
+	public ReturnToCartPage() throws IOException {
+		super();
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	@FindBy(id="quoteMailtop")
+	WebElement emailTextBox;
+	
+	
+	@FindBy(linkText="Send Email")
+	WebElement SendEmailBtn;
+	
+	
+	
+	
+	
+	
+	
+
+}

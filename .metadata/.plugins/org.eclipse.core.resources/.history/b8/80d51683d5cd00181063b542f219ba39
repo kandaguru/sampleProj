@@ -1,0 +1,41 @@
+package com.qa.purchaseorder.utilities;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
+
+public class GoogleSheetAPI1 {
+	
+	private static final String APPLICATION_NAME = "spreadsheet-application-example";
+
+
+	private static final String ACCOUNT_P12_ID = "<>";
+	private static final File P12FILE = new File("src/main/resources/<>");
+
+	
+	private static final List<String> SCOPES = Arrays.asList(
+	  "https://docs.google.com/feeds",
+	  "https://spreadsheets.google.com/feeds");
+
+	
+	private static final String SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/1-7Mg47BXoc-jiDikBgzAPtAiIeRdaYqZHD6Xa6U3-tM/edit#gid=0";
+
+	private static final URL SPREADSHEET_FEED_URL;
+
+	static {
+	  try {
+	    SPREADSHEET_FEED_URL = new URL(SPREADSHEET_URL);
+	  } catch (MalformedURLException e) {
+	    throw new RuntimeException(e);
+	  }
+	}
+	
+	
+	
+	
+	
+	
+
+}

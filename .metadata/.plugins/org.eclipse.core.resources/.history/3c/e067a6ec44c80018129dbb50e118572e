@@ -1,0 +1,9 @@
+######### Browser details in Lowecase##########
+
+browser=chrome
+
+######## URL,User name and Password #########
+
+url=https://iam.test.auckland.ac.nz/profile/SAML2/Redirect/SSO?execution=e1s1
+username=kbas663
+password=Kbas663_01

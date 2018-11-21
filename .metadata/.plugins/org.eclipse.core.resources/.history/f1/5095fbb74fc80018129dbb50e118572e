@@ -1,0 +1,36 @@
+package com.uoa.minc.page;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.uoa.qa.minc.base.TestBase;
+
+public class HomePage extends TestBase {
+	
+	public HomePage() throws IOException {
+		super();
+	}
+
+
+
+	By wincLink = By.linkText("Winc (formerly Staples)");
+	
+	
+	
+	
+	public CurrentOrder clickMincLink() {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(wincLink));
+		wincLink.click();
+		return new CurrentOrder();
+		
+		
+	}
+	
+	
+}

@@ -1,0 +1,25 @@
+package com.uoa.minc.page;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class HomePage {
+	
+	//@FindBy(linkText="Winc (formerly Staples)")
+	@FindBy(xpath="//a[contain(text(),'Winc (formerly Staples)'")
+	WebElement wincLink;
+	
+	
+	
+	
+	public CurrentOrder clickMincLink() {
+		
+		
+		wincLink.click();
+		return new CurrentOrder();
+		
+		
+	}
+	
+	
+}

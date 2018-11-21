@@ -1,0 +1,51 @@
+package ExcelTestPackage;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class TestDataDrivenNew {
+	
+	@Test
+	public void tableTestnew()
+	{
+		
+		
+FileInputStream fis= new FileInputStream("C:\\Users\\kbas663\\Desktop\\Test Stratergy\\DemoData.xlsx");
+		
+		XSSFWorkbook wb= new XSSFWorkbook(fis);
+		
+		
+	int numberOfSheets=	wb.getNumberOfSheets();
+	
+	
+	for(int shno=0;shno<numberOfSheets;shno++) {
+		
+		
+		if(wb.getSheetName(shno).equalsIgnoreCase("Data Set 2")) {
+			
+			
+			XSSFSheet sheet=wb.getSheetAt(shno);
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+	}
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,90 @@
+package com.uoa.qa.minc.testcase;
+
+import java.io.IOException;
+
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.uoa.minc.page.CurrentOrderPage;
+import com.uoa.minc.page.HomePage;
+import com.uoa.minc.page.ItemCataloguePage;
+import com.uoa.minc.page.LoginPage;
+import com.uoa.qa.minc.base.TestBase;
+import com.uoa.qa.minc.utilities.TestUtil;
+
+public class MincAddToCartTest extends TestBase {
+
+	public MincAddToCartTest() throws IOException {
+		super();
+	}
+
+	LoginPage loginPage;
+	HomePage homePage;
+	CurrentOrderPage currentOrderPage;
+	ItemCataloguePage itemCataloguePage;
+
+	@BeforeMethod
+	public void setUp() throws IOException {
+		intialize(); // driver instance initialization
+
+		loginPage = new LoginPage();
+
+		homePage = loginPage.login();
+
+	}
+
+	@Test(priority=1)
+	public void add_Items_To_cart_Test() throws IOException, InterruptedException {
+
+		String itemName = prop.getProperty("itemname");
+		String numberOfItemsString = prop.getProperty("numberofitems");
+
+		//int numberOfItems = Integer.parseInt(numberOfItemsString);
+		
+		double numberOfItems=Double.parseDouble(numberOfItemsString);
+		
+		
+
+		currentOrderPage = homePage.clickMincLink();
+		Thread.sleep(1000L);
+
+		TestUtil.switchTowindow(); // switching to child pop-up tab/window
+
+		itemCataloguePage = currentOrderPage.searchItem(itemName); // enter choice of item
+
+		itemCataloguePage.select_items(numberOfItems, itemName);
+
+	}
+
+	
+	@Test(priority=2)
+	public void complete_Order_test() {
+		
+		Actions action = new Actions(driver);
+		
+		
+		
+		
+	}
+	
+	@DataProvider
+	public void getdata()
+	{
+		
+		Object data[][]= new Object[2][2];
+				
+		
+		
+		
+	}
+	@AfterMethod
+	public void tearDown() {
+
+		driver.quit();
+		driver = null;
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.uoa.qa.winc.page;
+
+import com.uoa.qa.winc.base.TestBase;
+
+public class ReturnToCartPage extends TestBase {
+	
+	
+
+}

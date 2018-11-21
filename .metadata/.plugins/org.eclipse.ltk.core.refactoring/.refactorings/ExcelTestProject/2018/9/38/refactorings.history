@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;cpm.utility&apos; to &apos;com.utility&apos;&#x0D;&#x0A;- Original project: &apos;ExcelTestProject&apos;&#x0D;&#x0A;- Original element: &apos;ExcelTestProject/src/test/java/cpm.utility&apos;&#x0D;&#x0A;- Renamed element: &apos;ExcelTestProject/src/test/java/com.utility&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;cpm.utility&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/test\/java&lt;cpm.utility" name="com.utility" qualified="false" references="true" stamp="1537604838456" textual="false" version="1.0"/>
+</session>

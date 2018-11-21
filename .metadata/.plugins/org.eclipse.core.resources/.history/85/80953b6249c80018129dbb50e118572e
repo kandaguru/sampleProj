@@ -1,0 +1,9 @@
+package com.uoa.minc.page;
+
+import org.openqa.selenium.WebElement;
+
+public class HomePage {
+	
+	@findBy(linkText="Winc (formerly Staples)")
+	WebElement wincLink;
+}

@@ -1,0 +1,20 @@
+package com.uoa.minc.page;
+
+import java.io.IOException;
+
+import com.uoa.qa.minc.base.TestBase;
+
+public class LoginPage extends TestBase {
+	
+	public LoginPage() throws IOException {
+		super();
+		
+	}
+
+	public static void login() {
+		
+		
+		
+	}
+
+}

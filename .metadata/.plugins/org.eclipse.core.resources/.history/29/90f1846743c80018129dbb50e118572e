@@ -1,0 +1,35 @@
+package com.uoa.minc.page;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.uoa.qa.minc.base.TestBase;
+
+public class LoginPage extends TestBase {
+	
+	public LoginPage() throws IOException {
+		super();
+		PageFactory.initElements(driver, this);
+		
+	}
+
+	@FindBy(id="username")
+	WebElement userName;
+	
+	@FindBy(id="password")
+	WebElement password;
+	
+	
+	
+	
+	
+	public static void login() {
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.uoa.minc.page;
+
+public class LoginPage {
+	
+	public static void login() {
+		
+		
+		
+	}
+
+}

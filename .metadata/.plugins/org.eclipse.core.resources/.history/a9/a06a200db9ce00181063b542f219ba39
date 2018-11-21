@@ -1,0 +1,9 @@
+package java8;
+
+
+@FunctionalInterface
+public interface intref {
+
+	public void m1();
+	
+}

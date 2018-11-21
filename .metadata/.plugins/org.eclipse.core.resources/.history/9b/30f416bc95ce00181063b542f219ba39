@@ -1,0 +1,38 @@
+package com.qa.purchaseorder.testcase;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.util.List;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import resources.GoogleSheetAPI;
+
+public class EQuotePOTest {
+
+	
+	
+	
+	
+	@DataProvider
+	public void setUp() throws IOException, GeneralSecurityException {
+	
+		
+		GoogleSheetAPI api= new GoogleSheetAPI();
+		
+		List<List<Object>> values=api.getSpreadSheetRecords("1-7Mg47BXoc-jiDikBgzAPtAiIeRdaYqZHD6Xa6U3-tM", "Sheet1!A1:C");
+		
+		for (int i=0;i<values.size();i++) {
+			
+			System.out.println(values.get(i));
+			
+		}
+		
+		
+	
+		
+	
+	}
+	
+}
