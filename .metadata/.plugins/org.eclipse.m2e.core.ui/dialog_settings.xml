@@ -25,6 +25,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\kbas663\eclipse-workspace\Appium"/>
 			<item value="C:\Users\kbas663\Projects-AUTO\POEQuoteProject"/>
 			<item value="C:\Users\kbas663\Projects-AUTO\PurchaseOrderProject"/>
 			<item value="C:\Users\kbas663\Projects-AUTO\wincProject-master\MincProject"/>

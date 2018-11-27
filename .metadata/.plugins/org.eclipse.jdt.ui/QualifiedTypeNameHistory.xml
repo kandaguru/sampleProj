@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
-<fullyQualifiedTypeName name="com.uoa.minc.page.ItemCataloguePage"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerOptions"/>
-<fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
 <fullyQualifiedTypeName name="org.apache.commons.collections4.map.HashedMap"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFWorkbook"/>
@@ -30,7 +24,6 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.PageLoadStrategy"/>
 <fullyQualifiedTypeName name="com.uoa.qa.winc.utilities.TestUtil"/>
-<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.htmlunit.HtmlUnitDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.remote.CapabilityType"/>
@@ -41,7 +34,6 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
 <fullyQualifiedTypeName name="com.qa.purchaseorder.base.POTestBase"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="org.testng.Assert"/>
@@ -60,4 +52,12 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.events.EventFiringWebDriver"/>
 <fullyQualifiedTypeName name="com.qa.poequote.utilities.WebEventListener"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="io.appium.java_client.TouchAction"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.touch.TouchActions"/>
+<fullyQualifiedTypeName name="io.appium.java_client.touch.TapOptions"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="io.appium.java_client.touch.offset.ElementOption"/>
+<fullyQualifiedTypeName name="io.appium.java_client.touch.LongPressOptions"/>
+<fullyQualifiedTypeName name="java.time.Duration"/>
 </qualifiedTypeNameHistroy>
